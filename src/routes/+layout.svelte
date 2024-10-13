@@ -1,6 +1,6 @@
-<script>
-	import Header from './Header.svelte';
-	import '../app.css';
+<script lang="ts">import { signIn, signOut } from "@auth/sveltekit/client";
+import { page } from "$app/stores";
+$: ({ session, authProviders } = $page.data);
 </script>
 
 <div class="app">
